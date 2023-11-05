@@ -18,7 +18,7 @@ function App() {
   })
 
   return (
-    <div>
+    <div className="App">
       <Typography variant="h6">a</Typography>
     </div>
   )
