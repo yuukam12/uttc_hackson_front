@@ -7,6 +7,7 @@ import { ProfilePage } from './pages/ProfilePage'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { onAuthStateChanged } from 'firebase/auth'
 import { fireAuth } from './apis/firebase'
+import { Typography } from '@mui/material'
 
 function App() {
   const [loginUser, setLoginUser] = useState(fireAuth.currentUser)
@@ -15,15 +16,11 @@ function App() {
   onAuthStateChanged(fireAuth, (user) => {
     setLoginUser(user)
   })
-  
+
   return (
-    <Router>
-      <Routes>
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/" element={<IndexPage />} />
-        <Route path="/profile" element={<ProfilePage />} />
-      </Routes>
-    </Router>
+    <div>
+      <Typography variant="h6">a</Typography>
+    </div>
   )
 }
 
