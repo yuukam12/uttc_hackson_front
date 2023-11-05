@@ -18,9 +18,13 @@ function App() {
   })
 
   return (
-    <div className="App">
-      <Typography variant="h6">a</Typography>
-    </div>
+    <Router>
+      <Routes>
+          <Route path="/" element={<LoginPage/>} />
+          <Route path="/index" element={<IndexPage/>} />
+          <Route path="/profile" element={<ProfilePage/>} />
+      </Routes>
+    </Router>
   )
 }
 
