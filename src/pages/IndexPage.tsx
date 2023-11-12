@@ -6,6 +6,7 @@ import { ContentType } from "../types/ContentType";
 import { getItems } from "../apis/api";
 import { AddButton } from "../components/AddButton";
 import { SignOutButton } from "../components/SignOutButton";
+import { Mock } from "../components/Mock"
 export const IndexPage: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [category, setCategory] = useState("Web App Deep Dive")
@@ -34,6 +35,7 @@ export const IndexPage: React.FC = () => {
                 <Item key = {item.id} title={item.title} media ={item.media} />
             ))}
             </Stack>
+            <Mock/>
         </Stack>
         )
 }
