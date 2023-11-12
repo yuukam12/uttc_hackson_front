@@ -16,18 +16,21 @@ const columns: GridColDef[] = [
     { field: "Media", headerName: "メディア", width: 70 },
 
 ];
-
+type Props = {
+    Id: string;
+    title: string;
+    description: string;
+    media: string;
+  }
 
 const rows2 = [
     { id: 1, Title: "エラー解消", Description: "エラーを解消する", CreateDate: "2002/07/27", Category: "Web App Deep Dive", Media: "website" },
 ];
 
-export const Mock: React.FC = ()=> {
+export const Mock: React.FC<Props> = ({Id, title, description, media})=> {
     const rows1 = [
-        { id: 1, Title: "エラー解消", Description: "エラーを解消する", CreateDate: "2002/07/27", Category: "Web App Deep Dive", Media: "website" },
-        { id: 2, Title: "フロントのデプロイ", Description: "フロントをデプロイする", CreateDate: "2000/01/01", Category: "Web App Deep Dive", Media: "video" },
-        { id: 3, Title: "バックのデプロイ", Description: "バックをデプロイする", CreateDate: "2000/12/31", Category: "Web App Deep Dive", Media: "book" },
-    ];
+        { id: Id, Title: title, Description: description, Media: media },
+    ]
     return (
         <Stack>
             <DataGrid
