@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const Api = axios.create({
-  baseURL: 'https://uttc-hackson-back-narcsvtora-uc.a.run.app',
+  baseURL: 'https://uttc-hackson-back-narcsvtora-uc.a.run.app/',
 })
 
 export async function getItems(category: string, keyword?: string) {
