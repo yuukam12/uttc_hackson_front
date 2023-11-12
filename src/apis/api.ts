@@ -71,7 +71,12 @@ export async function postItem(
       formData.append('image', image)
     }
 
-    await Api.post('/content/', formData)
+    await Api.post('/content', formData, {
+      headers: {
+        'Content-Type': 'application/json',
+        "Access-Contorol-Allow-Origin": "*",
+      },
+    })
   } catch (error) {
     throw error
   }
