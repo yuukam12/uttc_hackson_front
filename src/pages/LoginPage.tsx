@@ -15,7 +15,7 @@ export const LoginPage: React.FC = () => {
     return (
         <Stack>
             <GoogleLoginButton/>
-            <Card sx={{ minWidth: 275 }}>
+            <Card>
                 <CardContent>
                     <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                         Welcome to Our Knowledge Base!
