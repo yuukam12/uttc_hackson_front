@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Stack, Alert } from "@mui/material";
-import { SuggestedPatientsProps } from "../types/Patients";
-import { DataGrid, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
+import { DataGrid, GridColDef } from "@mui/x-data-grid";
 import { useNavigate } from 'react-router-dom';
 
 const columns: GridColDef[] = [

@@ -26,16 +26,16 @@ export const IndexPage: React.FC = () => {
     }, []);
 
     return (
-        <Stack>
-            <AddButton/>
-            <SignOutButton/>
-            <CategoryList handleCategorySelect={setCategory}/>
-            <Stack direction="column" spacing={2}>
-            {items.map((item) => (
-                <Item key = {item.id} title={item.title} media ={item.media} />
-            ))}
-            </Stack>
-            <Mock/>
+      <Stack direction="row" spacing={2}>
+        <AddButton/>
+        <SignOutButton/>
+        <CategoryList handleCategorySelect={setCategory}/>
+        <Stack direction="column" spacing={2}>
+        {items.map((item) => (
+            <Item key = {item.id} title={item.title} media ={item.media} />
+        ))}
         </Stack>
+        <Mock/>
+      </Stack>
         )
 }
