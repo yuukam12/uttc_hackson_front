@@ -74,7 +74,6 @@ export async function postItem(
     await Api.post('/content', formData, {
       headers: {
         'Content-Type': 'application/json',
-        "Access-Contorol-Allow-Origin": "*",
       },
     })
   } catch (error) {
