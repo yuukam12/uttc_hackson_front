@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const Api = axios.create({
-  baseURL: 'http://127.0.0.1:3036',
+  baseURL: 'http://127.0.0.1:3306',
 })
 
 export async function getItems(category: string, keyword?: string) {
