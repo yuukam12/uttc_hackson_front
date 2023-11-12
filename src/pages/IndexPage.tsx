@@ -8,7 +8,7 @@ import { AddButton } from "../components/AddButton";
 
 export const IndexPage: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [category, setCategory] = useState("")
+    const [category, setCategory] = useState("Web App Deep Dive")
     const [items, setItems] = useState<ContentType[]>([]);
 
     const fetchData = async () => {
