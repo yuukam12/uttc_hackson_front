@@ -17,7 +17,7 @@ type Props = {
     open: boolean
 }
 
-export const Content: React.FC<Props> = ({ id, open }) => {
+export const ContentDisplay: React.FC<Props> = ({ id, open }) => {
     const [item, setItem] = useState<ContentType | null>(null);
     const [isOpen, setIsOpen] = useState(open);
 

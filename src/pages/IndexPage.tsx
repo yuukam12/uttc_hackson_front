@@ -32,7 +32,7 @@ export const IndexPage: React.FC = () => {
         <CategoryList handleCategorySelect={setCategory}/>
         <Stack direction="column" spacing={2}>
         {items.map((item) => (
-            <Item key = {item.id} title={item.title} media ={item.media} />
+            <Item key = {item.id} id={item.id} title={item.title} media ={item.media} />
         ))}
         </Stack>
         <Mock/>

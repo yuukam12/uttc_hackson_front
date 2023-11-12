@@ -15,14 +15,14 @@ export const LoginPage: React.FC = () => {
     return (
         <Stack>
             <GoogleLoginButton/>
-            <Card>
+            <Card sx={{ minHeight: 1000 }}>
                 <CardContent>
                     <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
                         Welcome to Our Knowledge Base!
                     </Typography>
                     <CardMedia
                         component="img"
-                        height="30"
+                        height="1000"
                         image ={dogImage}
                         alt="犬"
                     />
