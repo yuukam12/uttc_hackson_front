@@ -50,11 +50,11 @@ export const CategoryList:  React.FC<Props> = ({ handleCategorySelect }) => {
             </List>
         </nav>
         <Divider/>
-        <nav aria-label="Hackson">
+        <nav aria-label="Hackathon">
             <List>
                 <ListItem disablePadding>
                     <ListItemButton>
-                        <ListItemText primary="Hackson" />
+                        <ListItemText primary="Hackathon" />
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>

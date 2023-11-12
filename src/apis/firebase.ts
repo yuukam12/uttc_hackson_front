@@ -3,11 +3,11 @@ import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyCufdYj9O9LhKiLd2-bAfLYVSyU76_TyqU",
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGEING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID,
+  authDomain: "uttc-hackson.firebaseapp.com",
+  projectId: "uttc-hackson",
+  storageBucket: "uttc-hackson.appspot.com",
+  messagingSenderId: "40688014142",
+  appId: "1:40688014142:web:4514f3bc2aac534cfa126f"
 };
 
 // Initialize Firebase
