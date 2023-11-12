@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const Api = axios.create({
-  baseURL: 'http://127.0.0.1:3306',
+  baseURL: 'https://uttc-hackson-back-narcsvtora-uc.a.run.app',
 })
 
 export async function getItems(category: string, keyword?: string) {
