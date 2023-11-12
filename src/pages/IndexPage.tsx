@@ -5,7 +5,7 @@ import { Item } from "../components/Item";
 import { ContentType } from "../types/ContentType";
 import { getItems } from "../apis/api";
 import { AddButton } from "../components/AddButton";
-
+import { SignOutButton } from "../components/SignOutButton";
 export const IndexPage: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [category, setCategory] = useState("Web App Deep Dive")
@@ -27,6 +27,7 @@ export const IndexPage: React.FC = () => {
     return (
         <Stack>
             <AddButton/>
+            <SignOutButton/>
             <CategoryList handleCategorySelect={setCategory}/>
             <Stack direction="column" spacing={2}>
             {items.map((item) => (
