@@ -50,9 +50,7 @@ export const AddModal: React.FC<Props> = ({ open }) => {
             <input type="text" value={media} onChange={(e) => setMedia(e.target.value)} />
             <Typography>説明：</Typography>
             <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
-            <Typography>画像：</Typography>
-            <input type="file" onChange={(e) => e.target.files && setImage(e.target.files[0])} />
-            <button type="submit">Submit</button>
+            <button type="submit" onClick={()=>setIsOpen(false)}>Submit</button>
           </form>
       </Dialog>
   );
