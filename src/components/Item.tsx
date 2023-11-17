@@ -52,7 +52,6 @@ export const Item: React.FC<Props> = ({
     e.preventDefault()
     try {
       await updateContent(id, newTitle, newDescription)
-      console.log('Content updated successfully')
       setIsUpdateOpen(false)
       setIsOpen(false)
     } catch (error) {

@@ -42,15 +42,19 @@ export async function getContent(id: string) {
 
 export async function updateContent(
     id: string,
-    title: string,
-    description: string,
+    newtitle: string,
+    newdescription: string,
   ) {
     try {
       await Api.put(`/content?id=${id}/`, {
-        title: title,
-        description: description,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        id: id,
+        title: newtitle,
+        description: newdescription,
       })
-      console.log(description)
+      console.log(newdescription)
     } catch (error) {
       throw error
     }
@@ -59,7 +63,14 @@ export async function updateContent(
 
 export async function deleteItem(id: string) {
   try {
-    await Api.delete(`/content?id=${id}/`)
+    await Api.delete(`/content?id=${id}/`, {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      data: {
+      id: id,
+      }
+    })
     console.log('Itemを削除しました')
   } catch (error) {
     throw error
