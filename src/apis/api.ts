@@ -24,25 +24,42 @@ export async function getContent(id: string) {
   }
 }
 
+// export async function updateContent(
+//   id: string,
+//   title: string,
+//   description: string,
+// ) {
+//   try {
+//     await Api.put(`/content/${id}/`, {
+//       title: title,
+//       description: description,
+//     })
+//     console.log(description)
+//   } catch (error) {
+//     throw error
+//   }
+// }
+
 export async function updateContent(
-  id: string,
-  title: string,
-  description: string,
-) {
-  try {
-    await Api.put(`/content/${id}/`, {
-      title: title,
-      description: description,
-    })
-    console.log(description)
-  } catch (error) {
-    throw error
+    id: string,
+    title: string,
+    description: string,
+  ) {
+    try {
+      await Api.put(`/content?id=${id}/`, {
+        title: title,
+        description: description,
+      })
+      console.log(description)
+    } catch (error) {
+      throw error
+    }
   }
-}
+
 
 export async function deleteItem(id: string) {
   try {
-    await Api.delete(`/content/${id}/`)
+    await Api.delete(`/content?id=${id}/`)
     console.log('Itemを削除しました')
   } catch (error) {
     throw error

@@ -22,7 +22,7 @@ export const LoginPage: React.FC = () => {
                     </Typography>
                     <CardMedia
                         component="img"
-                        height="1500"
+                        style={{ maxWidth: 300, maxHeight: 300, width: 'auto', height: 'auto' }}
                         image ={dogImage}
                         alt="犬"
                     />
