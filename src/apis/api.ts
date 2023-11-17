@@ -8,6 +8,7 @@ export async function getItems(category: string, keyword?: string) {
   try {
     const params = keyword ? { category, keyword } : { category }
     const response = await Api.get('/content', { params })
+    console.log(category)
     return response.data
   } catch (error) {
     throw error

@@ -1,22 +1,25 @@
 import { getAuth, signOut } from "firebase/auth";
 import React from "react";
 import { Button, Stack } from "@mui/material";
+import { useNavigate } from 'react-router-dom'
 
 const auth = getAuth();
-signOut(auth).then(() => {
-    console.log("Sign-out successful.")
-  }).catch((error) => {
-    // An error happened.
-  });
 export const SignOutButton:React.FC = () => {
-    signOut(auth).then(() => {
-        // Sign-out successful.
-      }).catch((error) => {
-        // An error happened.
-      });
-    return (
-        <Stack>
-            <Button onClick={()=> signOut(auth)}>Sign Out</Button>
-        </Stack>
-        )
+  const navigate = useNavigate();
+  const onClick = async()=>{
+    try {
+      await signOut(auth); // Assuming signOut returns a Promise
+      console.log("Sign out successful");
+      navigate(`/`);
+    } catch (error) {
+      console.error("Error signing out:", error);
+      // Handle error if needed
+    }
+  };
+
+  return (
+      <Stack>
+          <Button onClick={onClick}>Sign Out</Button>
+      </Stack>
+      )
 }

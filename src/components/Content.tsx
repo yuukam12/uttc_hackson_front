@@ -45,7 +45,7 @@ export const ContentDisplay: React.FC<Props> = ({ id, open }) => {
     }
 
     return (
-        <Dialog open={isOpen} onClose={() => setIsOpen(false)}>
+        <Dialog open={open} onClose={() => setIsOpen(false)}>
             <div>
                 <h2>{item.title}</h2>
                 <p>{item.description}</p>

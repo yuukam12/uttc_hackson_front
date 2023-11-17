@@ -3,7 +3,6 @@ import logo from './logo.svg'
 import './App.css'
 import { LoginPage } from './pages/LoginPage'
 import { IndexPage } from './pages/IndexPage'
-import { ProfilePage } from './pages/ProfilePage'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { onAuthStateChanged } from 'firebase/auth'
 import { fireAuth } from './apis/firebase'
@@ -22,7 +21,6 @@ function App() {
       <Routes>
           <Route path="/" element={<LoginPage/>} />
           <Route path="/index" element={<IndexPage/>} />
-          <Route path="/profile" element={<ProfilePage/>} />
       </Routes>
     </Router>
   )
