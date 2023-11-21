@@ -5,10 +5,10 @@ import CloseIcon from '@mui/icons-material/Close';
 
 type Props = {
     open: boolean
-    fetchData: () => void
+    reload: () => void
 }
 
-export const AddModal: React.FC<Props> = ({ open, fetchData }) => {
+export const AddModal: React.FC<Props> = ({ open, reload }) => {
   const [title, setTitle] = useState('');
   const [url, setUrl] = useState('');
   const [uploadedBy, setUploadedBy] = useState('');
@@ -35,12 +35,17 @@ export const AddModal: React.FC<Props> = ({ open, fetchData }) => {
 
   const onClick =() =>{
     setIsOpen(false)
-    fetchData()
+    reload()
+  }
+
+  const onClose =() =>{
+    setIsOpen(false)
+    reload()
   }
   return (
-      <Dialog open={isOpen} onClose={() => setIsOpen(false)}>
+      <Dialog open={isOpen} onClose={onClose}>
           <form onSubmit={onSubmit}>
-            <IconButton aria-label="close" onClick={() => setIsOpen(false)}>
+            <IconButton aria-label="close" onClick={onClose}>
               <CloseIcon />
             </IconButton>
             <Typography>タイトル：</Typography>

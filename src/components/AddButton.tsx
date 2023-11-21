@@ -5,9 +5,9 @@ import Stack from '@mui/material/Stack';
 import { AddModal } from './AddModal';
 
 type Props = {
-    fetchData: () => void
+    reload: () => void
 }
-export const AddButton: React.FC<Props> = ({ fetchData }) => {
+export const AddButton: React.FC<Props> = ({ reload }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -18,7 +18,7 @@ export const AddButton: React.FC<Props> = ({ fetchData }) => {
 
         <AddModal
         open={isOpen}
-        fetchData={fetchData}
+        reload={reload}
         />
         </Stack>
     );
