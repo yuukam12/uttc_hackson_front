@@ -68,7 +68,7 @@ export const IndexPage: React.FC = ()=> {
         <Stack direction="column" p={2}>
           <Stack direction="row" p={2}>
           <SignOutButton/>
-          <AddButton/>
+          <AddButton fetchData={fetchData}/>
           <Button onClick={sortByCreatedAt}>作成日順に並べる</Button>
           <Button onClick={() => filterByMedia('website')}>Website</Button>
           <Button onClick={() => filterByMedia('video')}>Video</Button>

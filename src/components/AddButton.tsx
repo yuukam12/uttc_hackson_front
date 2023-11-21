@@ -4,7 +4,10 @@ import AddIcon from '@mui/icons-material/Add';
 import Stack from '@mui/material/Stack';
 import { AddModal } from './AddModal';
 
-export const AddButton: React.FC = () => {
+type Props = {
+    fetchData: () => void
+}
+export const AddButton: React.FC<Props> = ({ fetchData }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
@@ -15,6 +18,7 @@ export const AddButton: React.FC = () => {
 
         <AddModal
         open={isOpen}
+        fetchData={fetchData}
         />
         </Stack>
     );

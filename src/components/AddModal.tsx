@@ -5,9 +5,10 @@ import CloseIcon from '@mui/icons-material/Close';
 
 type Props = {
     open: boolean
+    fetchData: () => void
 }
 
-export const AddModal: React.FC<Props> = ({ open }) => {
+export const AddModal: React.FC<Props> = ({ open, fetchData }) => {
   const [title, setTitle] = useState('');
   const [url, setUrl] = useState('');
   const [uploadedBy, setUploadedBy] = useState('');
@@ -32,6 +33,10 @@ export const AddModal: React.FC<Props> = ({ open }) => {
     setIsOpen(open);
   }, [open]);
 
+  const onClick =() =>{
+    setIsOpen(false)
+    fetchData()
+  }
   return (
       <Dialog open={isOpen} onClose={() => setIsOpen(false)}>
           <form onSubmit={onSubmit}>
@@ -50,7 +55,7 @@ export const AddModal: React.FC<Props> = ({ open }) => {
             <input type="text" value={media} onChange={(e) => setMedia(e.target.value)} />
             <Typography>説明：</Typography>
             <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
-            <button type="submit" onClick={()=>setIsOpen(false)}>Submit</button>
+            <button type="submit" onClick={onClick}>Submit</button>
           </form>
       </Dialog>
   );
