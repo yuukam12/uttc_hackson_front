@@ -54,10 +54,8 @@ export const AddModal: React.FC<Props> = ({ open, reload }) => {
     reload()
   }
 
-  const [cate, setCate] = useState('');
-
   const handleChange = (event: SelectChangeEvent) => {
-    setCate(event.target.value as string);
+    setCategory(event.target.value as string);
   };
 
   return (
@@ -94,8 +92,8 @@ export const AddModal: React.FC<Props> = ({ open, reload }) => {
           style={{width:200}}
         >
           <MenuItem value={"Web App Deep Dive"}>Web App Deep Dive</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          <MenuItem value={"The History of Web"}>The History of Web</MenuItem>
+          <MenuItem value={"エディタ（IDE）"}>エディタ（IDE）</MenuItem>
         </Select>
         <Typography>媒体：</Typography>
         <input
