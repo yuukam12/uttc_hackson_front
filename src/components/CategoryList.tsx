@@ -204,7 +204,7 @@ const handleListItemClick = async(index:number, category: string) => {
                     selected={selectedIndex === 19}
                     onClick={() => handleListItemClick(19, "CD(Continuous Delivery / Deployment)")}
                     >
-                        <ListItemText primary="CI(Continuous Integration / Deployment)" />
+                        <ListItemText primary="CD(Continuous Delivery / Deployment)" />
                     </ListItemButton>
                 </ListItem>
                 <ListItem disablePadding>
